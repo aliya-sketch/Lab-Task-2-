@@ -1,0 +1,42 @@
+name = input("Enter student name: ")
+roll_no = input("Enter roll number: ")
+
+math = float(input("Enter marks of Math: "))
+eng = float(input("Enter marks of English: "))
+phy = float(input("Enter marks of Physics: "))
+chem = float(input("Enter marks of Chemistry: "))
+comp = float(input("Enter marks of Computer: "))
+
+total = math + eng + phy + chem + comp
+per = (total / 500) * 100
+
+if per >= 80:
+    grade = "A+"
+elif per >= 70:
+    grade = "A"
+elif per >= 60:
+    grade = "B"
+elif per >= 50:
+    grade = "C"
+elif per >= 40:
+    grade = "D"
+else:
+    grade = "F"
+
+if math < 40 or eng < 40 or phy < 40 or chem < 40 or comp < 40:
+    result = "Fail"
+else:
+    result = "Pass"
+
+print("\n----- STUDENT MARKSHEET -----")
+print("Name:", name)
+print("Roll No:", roll_no)
+print("Math:", math)
+print("English:", eng)
+print("Physics:", phy)
+print("Chemistry:", chem)
+print("Computer:", comp)
+print("Total Marks:", total)
+print("Percentage:", per, "%")
+print("Grade:", grade)
+print("Result:", result)
